@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock title %}
+
+{% block body %}
+
+{% if request.user.username == 'alaa' %}
+<div class='management'>
+    <div class='manageHrader'>
+        <h1 id='en'>Orders of "{{item.username}}"</h1>
+        <h1 id='ar'>طلبات "{{item.username}}"</h1>
+    </div>
+    <div class='items'>
+        {% for order in orders %}
+        <div class='item itemUsers'>
+            <a href='/{{order.number}}/'>
+                <img src='{{order.photo.url}}'>
+                <div>
+                    <h2>{{order.title}}</h2>
+                    <p>{{order.price}} - ({{order.count}})</p>
+                    <p>{{order.date}}</p>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% else %}
+<div class='management'>
+    <div class='manageHrader'>
+        <h1 class='h1' id='en1'>you are not allowed to access this page</h1>
+        <h1 class='h1' id='ar1'>لا يسمح لك بالوصول إلى هذه الصفحة</h1>
+        <a href="{% url 'index' %}" id='en' style='text-align:center;display:block;color:#03a9f4;font-size:17px;'>Home</a>
+        <a href="{% url 'index' %}" id='ar' style='text-align:center;display:block;color:#03a9f4;font-size:17px;'>الصفحة الرئيسية</a>
+    </div>
+</div>
+{% endif %}
+
+{% endblock body %}

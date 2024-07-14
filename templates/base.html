@@ -1,0 +1,212 @@
+{% load static %}
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='description' content='Welcome to 🔆 Handy Gleam Store 🔆 A special store for handmade bags with love 🤍 With us you can design your own bag ❣️'>
+        <meta name='keywords' content='Handy Gleam'>
+        <meta name='auther' content='@hu226fn فاطمة همام'>
+        <title>{% block title %}{% endblock title %}</title>
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" type="image/x-icon" href="{% static 'images/icon.jpg' %}" >
+    </head>
+    <body>
+        <nav id='nav1'>
+            <ul>
+                <div>
+                    <li id='menu'><span class="material-symbols-outlined">menu</span></li>
+                    <li>
+                        <a href='/' style='margin:0 10px 0 0'>
+                            <img src="{% static 'images/icon.jpg' %}">
+                            <h3>Handy Gleam</h3>
+                        </a>
+                    </li>
+                    <li id='li-display' class='hoverLi'>
+                        <a href='/'>Home</a>
+                    </li>
+                    <li id='li-display'>
+                        <button id='up' class='hoverLi'>Sections^</button>
+                        <button id='down'>Sections<span style='font-weight:bloder'>∨</span></button>
+                        <ul id='ul-sections'>
+                            <li><a href='/'>All</a></li><hr>
+                            <li><a href='/mini/'>Mini</a></li><hr>
+                            <li><a href='/classic/'>classic</a></li><hr>
+                            <li><a href='/cards/'>Cards</a></li><hr>
+                            <li><a href='/wood/'>Wood</a></li><hr>
+                            <li><a href='/accessories/'>accessories</a></li><hr>
+                            <li><a href='/key-chain/'>Key Chain</a></li><hr>
+                            <li><a href='/phone-bag/'>Phone Bag</a></li>
+                        </ul>
+                    </li>
+                    {% if request.user.username == 'alaa' %}
+                    <li id='li-display' class='hoverLi'>
+                        <a href='/management/'>Management</a>
+                    </li>
+                    {% endif %}
+                </div>
+                <div>
+                    <li>
+                        <form method='get' action="{% url 'search' %}">
+                            <input type='text' placeholder='Search for Products' name='search'>
+                            <button type='submit'><span class="material-symbols-outlined">search</span></button>
+                        </form>
+                    </li>
+                    <li class='icons btn'><a href='/orders/'style='margin: 0;padding:0;'><span class="material-symbols-outlined">shopping_cart</span></a></li>
+                    <li class='icons btns' id='lang3' onclick='changeLanguage()'><span class="material-symbols-outlined" style='margin:5px;'>language</span></li>
+                    {% if request.user.is_authenticated %}
+                    <li class='icons1 btns' style='margin: 0;padding:0;'><a href='/register/logout/' style='margin: 0;padding:0;'><span class="material-symbols-outlined">logout</span></a></li>
+                    {% else %}
+                    <li class='icons1 btns' style='margin: 0;padding:0;'><a href='/register/login/' style='margin: 0;padding:0;'><span class="material-symbols-outlined">login</span></a></li>
+                    {% endif %}
+                </div>
+            </ul>
+            <ul id='ul-display'>
+                <li>
+                    <a href='/'>Home</a>
+                </li><hr>
+                <li>
+                    <button id='up0'>Sections^</button>
+                    <button id='down0'>Sections<span style='font-weight:bloder'>∨</span></button>
+                    <ul id='ul-sections0'>
+                        <li><a href='/'>All</a></li><hr>
+                        <li><a href='/mini/'>Mini</a></li><hr>
+                        <li><a href='/classic/'>classic</a></li><hr>
+                        <li><a href='/cards/'>Cards</a></li><hr>
+                        <li><a href='/wood/'>Wood</a></li><hr>
+                        <li><a href='/accessories/'>accessories</a></li><hr>
+                        <li><a href='/key-chain/'>Key Chain</a></li><hr>
+                        <li><a href='/phone-bag/'>Phone Bag</a></li>
+                    </ul>
+                </li>
+                {% if request.user.username == 'alaa' %}<hr>
+                <li>
+                    <a href='/management/'>Management</a>
+                </li>
+                {% endif %}<hr>
+                <li>
+                    <a href='/orders/'>Basket</a>
+                </li><hr>
+                <li>
+                    <button id='lang' onclick='changeLanguage()' style='padding:0;cursor: pointer;font-size:16px'>Change Lang.</button>
+                </li><hr>
+                <li>
+                    <a href="{% url 'logout' %}">Logout</a>
+                </li>
+            </ul>
+        </nav>
+        <nav id='nav2'>
+            <ul>
+                <div>
+                    <li id='menu1'><span class="material-symbols-outlined">menu</span></li>
+                    <li>
+                        <a href='/' style='margin:0 10px 0 0'>
+                            <img src="{% static 'images/icon.jpg' %}">
+                            <h3>Handy Gleam</h3>
+                        </a>
+                    </li>
+                    <li id='li-display'  class='hoverLi'>
+                        <a href='/'>الصفحة الرئيسية</a>
+                    </li>
+                    <li id='li-display'>
+                        <button id='up1' class='hoverLi'>الاقسام^</button>
+                        <button id='down1'>الاقسام<span style='font-weight:bloder'>∨</span></button>
+                        <ul id='ul-sections1'>
+                            <li><a href='/'>الكل</a></li><hr>
+                            <li><a href='/mini/'>صغيرة</a></li><hr>
+                            <li><a href='/classic/'>كلاسيكي</a></li><hr>
+                            <li><a href='/cards/'>بطاقات</a></li><hr>
+                            <li><a href='/wood/'>خشبية</a></li><hr>
+                            <li><a href='/accessories/'>اكسسوارات</a></li><hr>
+                            <li><a href='/key-chain/'>سلة مفاتيح</a></li><hr>
+                            <li><a href='/phone-bag/'>حقائب الموبايل</a></li>
+                        </ul>
+                    </li>
+                    {% if request.user.username == 'alaa' %}
+                    <li id='li-display'>
+                        <a href='/management/' class='hoverLi'>الادارة</a>
+                    </li>
+                    {% endif %}
+                </div>
+                <div>
+                    <li>
+                        <form method='get' action="{% url 'search' %}">
+                            <input type='text' placeholder='ابحث عن المنتجات' name='search'>
+                            <button type='submit'><span class="material-symbols-outlined">search</span></button>
+                        </form>
+                    </li>
+                    <li class='icons1 btns'><a href='/orders/' style='margin: 0;padding:0;'><span class="material-symbols-outlined">shopping_cart</span></a></li>
+                    <li class='icons1 btns' id='lang4' onclick='changeLanguage()'><span class="material-symbols-outlined" style='margin:5px;'>language</span></li>
+                    {% if request.user.is_authenticated %}
+                    <li class='icons1 btns' style='margin: 0;padding:0;'><a href='/register/logout/' style='margin: 0;padding:0;'><span class="material-symbols-outlined">logout</span></a></li>
+                    {% else %}
+                    <li class='icons1 btns' style='margin: 0;padding:0;'><a href='/register/login/' style='margin: 0;padding:0;'><span class="material-symbols-outlined">login</span></a></li>
+                    {% endif %}
+                </div>
+            </ul>
+            <ul id='ul-display1'>
+                <li>
+                    <a href='/'>الصفحة الرئيسية</a>
+                </li><hr>
+                <li>
+                    <button id='up2'>الاقسام^</button>
+                    <button id='down2'>الاقسام<span style='font-weight:bloder'>∨</span></button>
+                    <ul id='ul-sections2'>
+                        <li><a href='/'>الكل</a></li><hr>
+                        <li><a href='/mini/'>صغيرة</a></li><hr>
+                        <li><a href='/classic/'>كلاسيكي</a></li><hr>
+                        <li><a href='/cards/'>بطاقات</a></li><hr>
+                        <li><a href='/wood/'>خشبية</a></li><hr>
+                        <li><a href='/accessories/'>اكسسوارات</a></li><hr>
+                        <li><a href='/key-chain/'>سلة مفاتيح</a></li><hr>
+                        <li><a href='/phone-bag/'>حقائب الموبايل</a></li>
+                    </ul>
+                </li>
+                {% if request.user.username == 'alaa' %}<hr>
+                <li>
+                    <a href='/management/'>الادارة</a>
+                </li>
+                {% endif %}<hr>
+                <li>
+                    <a href='/orders/'>السلة</a>
+                </li><hr>
+                <li>
+                    <button id='lang1' onclick='changeLanguage()' style='padding:0;cursor: pointer;font-size:16px'>تغيير اللغة</button>
+                </li><hr>
+                <li>
+                    <a href="{% url 'logout' %}">تسجيل خروج</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+        {% block body %}{% endblock body %}
+        </main>
+        <footer id='footer1'>
+            <div>
+                <div>
+                    <img src="{% static 'images/icon.jpg' %}">
+                    <h3>Handy Gleam</h3>
+                </div>
+                <p>Welcome to 🔆 handy gleam store 🔆<br>A store specializing in handmade bags with love 🤍<br>With us you can design your own bag ❣️</p>
+            </div>
+            <div>
+                <h3 style='margin:10px 0 20px 0;!important'>Call Us</h3>
+                <a href='https://www.instagram.com/handy.gleam/' target='_blank'><i class="fa fa-instagram"></i>@handy.gleam</a>
+            </div>
+        </footer>
+        <footer id='footer2'>
+            <div>
+                <div>
+                    <img src="{% static 'images/icon.jpg' %}">
+                    <h3>Handy Gleam</h3>
+                </div>
+                <p>مرحبا بكم في 🔆 handy gleam store 🔆<br>متجر خاص بالحقائب المصنوعة يدوياً بكل حب 🤍<br>معنا يمكنكم تصميم حقيبتكم الخاصة</p>
+            </div>
+            <div>
+                <h3 style='margin:10px 0 20px 0;!important'>اتصل بنا</h3>
+                <a href='https://www.instagram.com/handy.gleam/' target='_blank'><i class="fa fa-instagram" style='margin:0 0 0 5px;'></i>@handy.gleam</a>
+            </div>
+        </footer>
+        <script src="{% static 'js/js.js' %}"></script>
+    </body>
+</html>

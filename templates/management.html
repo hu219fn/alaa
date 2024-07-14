@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Management of Website{% endblock title %}
+
+{% block body %}
+
+<div class='management' id='management1'>
+    <div class='manageHrader'>
+        <h1>Management of Website</h1>
+        <div style='display:flex;align-items:center;height: 25px;'>
+            <button class='addProduct'><a href='/management/product-add/'>Add Products</a></button>
+            <button class='addProduct' style='width:fit-content'><a href='/management/users/'><span class="material-symbols-outlined">group</span></a></button>
+        </div>
+    </div>
+    <div class='items m-t-40'>
+        {% for item in items %}
+        <div class='item'>
+            <a href='/{{item.id}}/'>
+                <img src='{{item.photo.url}}'>
+                <div>
+                    <h2>{{ item.title }} - ({{ item.category }})</h2>
+                    <p>{{ item.date }}</p>
+                </div>
+            </a>
+            <ul>
+                <li><a href='/management/product-orders/{{item.id}}/'>Orders</a></li>    
+                <li><a href='/management/product-edit/{{item.id}}/'>Edit</a></li>
+                <li><a href='/management/product-delete/{{item.id}}/'>Delete</a></li>
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class='management' id='management2'>
+    <div class='manageHrader'>
+        <h1>ادارة الموقع</h1>
+        <button><a href='/management/product-add/'>اضافة منتج</a></button>
+    </div>
+    <div class='items'>
+        {% for item in items %}
+        <div class='item'>
+            <a href='/{{item.id}}/'>
+                <img src='{{item.photo.url}}'>
+                <div>
+                    <h2>{{ item.title }}</h2>
+                    <p>{{ item.date }}</p>
+                </div>
+            </a>
+            <ul style='direction:ltr;'>
+                <li><a href='/management/product-orders/{{item.id}}/'>الطلبات</a></li>    
+                <li><a href='/management/product-edit/{{item.id}}/'>تعديل</a></li>
+                <li><a href='/management/product-delete/{{item.id}}/'>حذف</a></li>
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock body %}

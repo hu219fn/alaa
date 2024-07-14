@@ -1,0 +1,883 @@
+* {margin: 0;padding: 0;font-family: Tahoma, Verdana, sans-serif;}
+form {
+    margin: 2% 10%;
+}
+form h1 {
+    margin: 20px 0;
+    color: #03a9f4;
+    text-shadow: 0px 0px 2px #03a9f4;
+    letter-spacing: 1px;
+}
+@media (max-width:850px) {
+    form {
+        margin: 1% 10%;
+    }
+}
+form label {
+    display: block;
+    font-size: 18px;
+    color: #111;
+}
+form input, form select {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    outline: none;
+    font-size: 17px;
+}
+form textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 16px;
+    outline: none;
+}
+form input[type='submit'] {
+    width: fit-content;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #03a9f4;
+}
+form input[type='checkbox'] {
+    width: fit-content;
+}
+form input[type='submit']:hover {
+    text-decoration: underline;
+}
+form div {
+    margin: 2px 0;
+    font-size: 16px;
+}
+body {
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+}
+.phaR a {
+    text-decoration: none;
+    color: #03a9f4;
+}
+.phaR a:hover {
+    text-decoration: underline;
+}
+main {
+    min-height: 80%;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+ul {
+    list-style: none;
+}
+nav {
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 5;
+    position: sticky;
+    top: 0;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+}
+nav ul div{
+    display: flex;
+    align-items: center;
+}
+nav ul div li a {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    font-size: 17px;
+}
+nav ul div li button {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    font-size: 17px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+nav ul div li h3 {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    font-size: 22.5px;
+}
+nav ul div li img {
+    width: 40px;
+    border-radius: 50%;
+}
+#ul-sections {
+    position: absolute;
+    width: 150px;
+    top: 50px;
+    padding: 10px 0;
+    display: block;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    width: 100px;
+}
+#ul-sections li a {
+    font-size: 15px;
+    color: #03a9f4;
+}
+#ul-sections hr {
+    border: .5px solid #aaa;
+    margin: 5px 0;
+}
+#ul-sections1 {
+    position: absolute;
+    width: 150px;
+    top: 50px;
+    padding: 10px 0;
+    display: block;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    width: 100px;
+}
+#ul-sections1 li a {
+    font-size: 15px;
+    color: #03a9f4;
+}
+#ul-sections1 hr {
+    border: .5px solid #aaa;
+    margin: 5px 0;
+}
+nav ul div li form {
+    display: flex;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    margin: 0 5px;
+}
+nav ul div li form input {
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    outline: none;
+    margin: 0;
+    font-size: 15px;
+}
+nav ul div li form button {
+    padding: 5px;
+    margin: 0;
+    border-radius: 0 10px 10px 0;
+
+}
+nav ul div li form button:hover {
+    background-color: #f1f1f1
+}
+nav ul div li a span.material-symbols-outlined, #lang1, #lang {
+    padding: 10px;
+    border-radius: 50%;
+}
+nav ul div li a span.material-symbols-outlined:hover, #lang1:hover, #lang:hover {
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    text-decoration: none;
+}
+nav ul div li a:hover {
+    text-decoration: none;
+}
+#menu {
+    border-radius: 50%;
+    display: none;
+    cursor: pointer;
+}
+#menu span {
+    font-size: 27px!important;
+}
+#menu:hover {
+    background-color: #f1f1f1;
+}
+
+#menu1 {
+    border-radius: 50%;
+    display: none;
+    cursor: pointer;
+}
+#menu1 span {
+    font-size: 27px!important;
+}
+#menu1:hover {
+    background-color: #f1f1f1;
+}
+
+@media (max-width:850px) {
+    #li-display {
+        display: none;
+    }
+    #menu {
+        border-radius: 50%;
+        padding: 10px;
+        display: block;
+    }
+    #menu1 {
+        border-radius: 50%;
+        padding: 10px;
+        display: block;
+    }
+    .btns {
+        display: none!important;
+    }
+}
+#ul-display {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    left: 20px;
+    top: 50px;
+    padding: 10px 0;
+    border: 1px solid #aaa;
+}
+#ul-display li {
+    padding: 5px 20px;
+}
+#ul-display li a {
+    color:#03a9f4;
+}
+#ul-display li button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color:#03a9f4;
+}
+#ul-display li button:hover {
+    text-decoration: underline;
+}
+#ul-display1 li button:hover {
+    text-decoration: underline;
+}
+#ul-display hr {
+    border: .5px solid #aaa;
+    margin: 5px 0;
+}
+#ul-display1 {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    right: 20px;
+    top: 50px;
+    padding: 10px 0;
+    border: 1px solid #aaa;
+}
+#ul-display1 li {
+    padding: 5px 20px;
+}
+#ul-display1 li a {
+    color:#03a9f4;
+}
+#ul-display1 li button{
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color:#03a9f4;
+}
+#ul-display1 hr {
+    border: .5px solid #aaa;
+    margin: 5px 0;
+}
+#ul-sections0 {
+    width: 150px;
+    position: absolute;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    padding: 10px 0;
+}
+#ul-sections2 {
+    width: 150px;
+    position: absolute;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    right: 100px;
+    background-color: #f1f1f1;
+    padding: 10px 0;
+}
+footer {
+    background-color:#AFD9CC;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    padding: 30px 10%;
+    gap: 30px;
+    width: 80%;
+}
+footer div div {
+    display: flex;
+    align-items: center;
+}
+footer div div img {
+    height: 50px;
+    margin: 0 5px 5px 0;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+footer div h3 {
+    line-height: 30px;
+    font-size: 22.5px;
+    margin:0 20px;
+}
+footer div a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+footer div a i {
+    font-size: 20px;
+    font-weight: 900;
+    margin: 0 5px 0 0;
+}
+footer p {
+    margin-top: 10px;
+}
+#lang1,#lang {
+    margin: 0;
+}
+#lang1:hover, #lang:hover {
+    text-decoration: underline;
+}
+@media (max-width:700px) {
+    footer {
+        text-align: center!important;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    footer div {
+        margin:0 0 20px 0!important;
+    }
+    footer div div {
+        display: block!important;
+    }
+    footer div a {
+        display: block!important;
+    }
+    nav ul {
+        padding: 15px 2.5%;
+    }
+}
+.btns {
+    display: block;
+    margin: 0 2.5px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.btns:hover {
+    background-color: #f1f1f1;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 35px;
+    margin: 7% 10%;
+    margin-bottom: 100px;
+    grid-template-rows: 1fr;
+}
+.container section {
+    position: relative;
+}
+.container section {
+    display: block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    padding: 20px 0 0 0;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.container section a {
+    height: fit-content;
+}
+.container section a:hover {
+    text-decoration: none;
+}
+.container section a img {
+    height: 70%;
+    width: 80%;
+    margin: 0 10% 10px 10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+.container section a p {
+    font-size: 16px;
+    margin: 5px 0 ;
+    color: #555;
+}
+.container section a h2 {
+    font-size: 25px;
+    font-weight: 700;
+}
+.container section a h3 {
+    font-size: 23px;
+    color: red;
+    text-shadow: 0px 0px 2px red;
+}
+@media (max-width:850px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin: 5% 10%;
+        margin-bottom: 100px;
+    }
+    .container section {
+        margin-top: 20px;
+    }
+}
+.sell {
+    background-color: yellow;
+    padding: 20px;
+    color: red;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 50%;
+    text-align: center;
+    rotate: 340deg;
+    position: absolute;
+    top: -5px;
+    left: -25px;
+    z-index: 3;
+}
+.container section:hover {
+    rotate: 1deg;
+}
+@media (max-width:600px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin: 5% 5%;
+        margin-bottom: 100px;
+    }
+    .container section a{
+        margin: 40px 0;
+    }
+    .sell {
+        top: 0;
+        left: -25px;
+    }
+}
+.hoverLi:hover {
+    text-decoration: underline;
+}
+.detail {
+    background-color: #fff;
+    margin: 5% 10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.detail .div1 img {
+    width: calc(100% - 10px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+.detail .div2 {
+    margin: 1.5% 3%;
+}
+.detail .div2 h1 {
+    font-size: 200%;
+    color: #000;
+    text-shadow: 0px 0px 1px black;
+    letter-spacing: 1px;
+}
+.detail .div2 p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #555;
+}
+.detail .div2 .price {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.detail .div2 .price h3 {
+    font-size: 23px;
+    color: red;
+}
+.detail .div2 .price strong {
+    font-size: 17px;
+    color: #9E9E9E;
+    font-weight: 400;
+}
+.detail .div2 form input[type='submit'] {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin: 20px 0 0 0;
+    color: #fff;
+    background-color: #AFD9CC;;
+    font-size: 17px;
+    cursor: pointer;
+}
+.detail .div2 form input[type='submit']:hover {
+    text-decoration: underline;
+}
+@media (max-width:700px){
+    .detail {
+        grid-template-columns: 100%;
+    }
+    .detail .div2 {
+        margin: 3%;
+    }
+    .detail .div1 img {
+        width: 100%;
+    }
+}
+.detail .div2 form .count {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    width: fit-content;
+}
+.detail .div2 form .count button, .detail .div2 form .count input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 5px;
+}
+.detail .div2 form .count button:hover{
+    cursor: pointer;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+}
+.detail .div2 form .count input[type='number'] {
+    width: 50px;
+    text-align: center;
+    font-size: 17px;
+    padding: 0;
+}
+.detail .div2 form .count input[type='number']::-webkit-outer-spin-button,
+.detail .div2 form .count input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.detail .div2 form .count0 {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0 0;
+}
+.orders {
+    margin: 2% 10%;
+}
+.orders h1 {
+    margin: 10px 0;
+}
+.order-div {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 55% 45%;
+}
+.orders .order {
+    position: relative;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    color: #000;
+    justify-content: space-between;
+}
+.orders .order h1 {
+    font-size: 22px;
+    margin: 0 0 5px 0;
+    text-shadow: 0px 0px 1px #000;
+    letter-spacing: 1px;
+}
+.orders .order img {
+    height: 50px;
+    border: 1px solid #f1f1f1;
+}
+.orders .order button {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 5px;
+}
+.orders .order button:hover {
+    background-color: #f1f1f1;
+}
+.order-div .content {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    height: fit-content;
+}
+.order-div .content h3 {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 15px 0;
+}
+.order-div .content button {
+    border: none;
+    background-color: transparent;
+}
+.order-div .content button a {
+    display: block;
+    background-color: #AFD9CC;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px 0;
+    cursor: pointer;
+    font-size: 17px;
+}
+.order-div .content h1#total {
+    color: red;
+    font-size: 35px;
+    font-weight: bolder;
+    text-shadow: 0px 0px 2px red;
+    margin: 10px 0 10px 0;
+}
+@media (max-width: 850px) {
+    .orders {
+        margin: 2% 10%;
+    }
+    .order-div {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}@media (max-width: 600px) {
+    .orders {
+        margin: 2% 5%;
+    }
+}
+.deleteBTN {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: red;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 50%;
+    padding: 10px;
+}
+.deleteBTN:hover {
+    background-color: #f1f1f1;
+}
+.b {
+    color: red;
+}
+.h1 {
+    text-align: center;
+    margin: 20px 0 10px 0;
+    text-shadow: 0px 0px 1px #000;
+    letter-spacing: 1px;
+}
+.management {
+    margin: 2% 10%;
+}
+.management .manageHrader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.management .manageHrader button {
+    background-color: transparent;
+    border: none;
+    height: auto;
+}
+.management .manageHrader button a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #555;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px 15px;
+    height: 100%;
+    cursor: pointer;
+}
+.management .manageHrader button#a  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #555;
+    padding:0;
+    height: 100%;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+.management .manageHrader button#a a{
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    padding: 0;
+}
+.management .manageHrader button a:hover {
+    text-decoration: underline;
+}
+.management .manageHrader button a:hover span.material-symbols-outlined{
+    text-decoration: none!important;
+}
+.management .manageHrader h1 {
+    margin: 0;
+    text-shadow: 0px 0px 1px #000;
+    letter-spacing: 1px;
+}
+.management .items .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #555;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+.management .items .item a {
+    display: flex;
+    align-items: center;
+}
+.management .items .item a img {
+    width: 50px;
+    border: 1px solid #555;
+}
+.management .items .item a div {
+    padding: 0 10px;
+}
+.management .items .item a div p {
+    color: #555;
+    margin-top: 5px;
+}
+.management .items .item ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    direction: rtl;
+}
+.management .items .itemUsers a#deleteUser {
+    padding: 5px;
+    border-radius: 50%;
+    display: block;
+}
+.management .items .itemUsers a#deleteUser:hover{
+    background-color: #f1f1f1;
+    text-decoration: none;
+}
+.management .manageHrader .allUsers {
+    width: fit-content;
+}
+@media (max-width:850px) {
+    .management {
+        margin: 2% 10%;
+    }
+    .management .manageHrader {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    .management .manageHrader button {
+        width: 100%;
+        margin: 10px 2px;
+    }
+    .management .manageHrader .addProduct {
+        margin-top: 50px;
+    }
+    .m-t-40 {
+        margin-top: 40px;
+    }
+    .management .manageHrader.users0{
+        display: flex;
+    }
+    .management .manageHrader div form .allUsers {
+        width: fit-content!important;
+    }
+}@media (max-width:600px) {
+    .management {
+        margin: 2% 5%;
+    }
+}@media (max-width:600px){
+    .management .items .item {
+        display: block;
+    }
+    .management .items .item a div h2 {
+        font-size: 20px;
+    }
+    .management .items .item ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 5px;
+    }
+    .management .items .itemUsers {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+form .back {
+    width: fit-content;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 10px 5px 10px 0;
+    background-color: #ffeb3b;
+}
+form .back:hover {
+    text-decoration: underline;
+}
+.management .manageHrader div form {
+    display: flex;
+    align-items: center;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    margin: 0 5px;
+    height: 40px;
+    background-color: #fff;
+}
+.management .manageHrader div form input {
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    outline: none;
+    margin: 0;
+    font-size: 15px;
+}
+.management .manageHrader div form button {
+    padding: 2px 5px;
+    height: 100%;
+    margin: 0;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    width: min-content!important;
+}
+.management .manageHrader div form button:hover {
+    background-color: #f1f1f1
+}
